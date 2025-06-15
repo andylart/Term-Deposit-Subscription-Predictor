@@ -63,8 +63,9 @@ Predict whether a bank client will subscribe to a term deposit based on demograp
 
 ## 📌 Deployment
 
-Deployed as a Streamlit web application for real-time predictions.  
-**To run locally:**
+This project is deployed as a Streamlit web application for real-time predictions.
+
+🔗 [Click here to access the live app](https://term-deposit-subscription-predictor-ch9dca2w6fzpz268muchtx.streamlit.app/)
 
 ## 📌 Author
 Andrew Lartey
