@@ -71,6 +71,15 @@ Contact Duration: Call duration had a significant positive relationship with sub
 Previous Campaign Outcomes: Clients with a previous successful marketing outcome were more likely to subscribe again.
 
 Pdays (Days since last contact): Clients contacted more recently (lower pdays values) showed a higher likelihood of subscribing.
+Euribor 3-Month Rate (euribor3m): Higher euribor3m values were associated with lower subscription rates — indicating that during periods of higher interest rates in the broader economy, clients were less willing to commit to fixed-term deposits.
+
+Employment Variation Rate (emp_var_rate): Lower emp_var_rate values correlated with higher subscription rates.
+
+Consumer Confidence Index (cons_conf_idx): Higher consumer confidence led to increased likelihood of term deposit subscriptions.
+
+Month of Contact (month): Campaigns executed in May, August, and October achieved higher subscription rates.
+
+Contact Type (contact): Cellular communication channels showed higher success rates than telephone calls.
 
 ---
 
