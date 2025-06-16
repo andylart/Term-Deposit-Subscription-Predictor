@@ -71,6 +71,7 @@ Contact Duration: Call duration had a significant positive relationship with sub
 Previous Campaign Outcomes: Clients with a previous successful marketing outcome were more likely to subscribe again.
 
 Pdays (Days since last contact): Clients contacted more recently (lower pdays values) showed a higher likelihood of subscribing.
+
 Euribor 3-Month Rate (euribor3m): Higher euribor3m values were associated with lower subscription rates — indicating that during periods of higher interest rates in the broader economy, clients were less willing to commit to fixed-term deposits.
 
 Employment Variation Rate (emp_var_rate): Lower emp_var_rate values correlated with higher subscription rates.
@@ -95,6 +96,10 @@ Schedule calls during months with historically higher subscription rates (e.g. M
 Limit or reevaluate the use of telephone contact channels, which showed lower subscription rates compared to cellular.
 
 Develop a lead scoring model incorporating these key variables to assist the marketing team in efficiently targeting high-potential clients.
+
+Monitor macroeconomic indicators like employment variation rate (emp_var_rate) and consumer confidence (cons_conf_idx) — launching campaigns during periods of stable employment rates and higher consumer confidence may improve subscription rates.
+
+Adjust campaign intensity during periods of high euribor3m rates — as higher interest rates correlate with lower subscription rates, marketing efforts may need to be adapted during such times.
 
 ---
 
