@@ -61,7 +61,36 @@ Predict whether a bank client will subscribe to a term deposit based on demograp
 
 ---
 
-## 📌 Deployment
+📊 EDA Highlights
+Subscription Rate: A relatively small proportion of clients subscribed to the term deposit, indicating a class imbalance in the dataset.
+
+Age Factor: Clients aged between 30 and 40 years were more likely to subscribe, while subscription rates declined for older clients.
+
+Contact Duration: Call duration had a significant positive relationship with subscription; longer calls tended to lead to positive outcomes.
+
+Previous Campaign Outcomes: Clients with a previous successful marketing outcome were more likely to subscribe again.
+
+Pdays (Days since last contact): Clients contacted more recently (lower pdays values) showed a higher likelihood of subscribing.
+
+---
+
+📌 Actionable Recommendations:
+Prioritize clients aged 30–40 years in upcoming campaigns as they showed higher responsiveness.
+
+Invest in longer, high-quality client calls, as call duration was a strong predictor of positive outcomes.
+
+Focus on clients with previous positive campaign outcomes for higher success rates in follow-up campaigns.
+
+Schedule calls during months with historically higher subscription rates (e.g. May, August, October).
+
+Limit or reevaluate the use of telephone contact channels, which showed lower subscription rates compared to cellular.
+
+Develop a lead scoring model incorporating these key variables to assist the marketing team in efficiently targeting high-potential clients.
+
+---
+
+
+##Deployment
 
 This project is deployed as a Streamlit web application for real-time predictions.
 
