@@ -1,15 +1,13 @@
+
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
-
 import streamlit as st
 import numpy as np
-import pickle
+import pandas as pd
+import joblib
 
 # Load the trained model
-import joblib
 model = joblib.load('model.pkl')
 
 st.title("Bank Client Subscription Prediction App")
@@ -44,21 +42,41 @@ job_unemployed = st.number_input("job_unemployed (1=yes, 0=no)", min_value=0, ma
 
 # Make prediction when user clicks button
 if st.button("Predict"):
-    input_data = np.array([[nr_employed, pdays, euribor3m, emp_var_rate, poutcome_nonexistent, contact_telephone, cons_price_idx,
-                            month_may, default_unknown, job_blue_collar, campaign, poutcome_success, previous, month_mar, month_oct,
-                            month_sep, job_student, job_retired, month_dec, cons_conf_idx, marital_single, education_university, age,
-                            education_unknown, job_unemployed]])
+    input_data = pd.DataFrame([{
+        'nr_employed': nr_employed,
+        'pdays': pdays,
+        'euribor3m': euribor3m,
+        'emp_var_rate': emp_var_rate,
+        'poutcome_nonexistent': poutcome_nonexistent,
+        'contact_telephone': contact_telephone,
+        'cons_price_idx': cons_price_idx,
+        'month_may': month_may,
+        'default_unknown': default_unknown,
+        'job_blue-collar': job_blue_collar,
+        'campaign': campaign,
+        'poutcome_success': poutcome_success,
+        'previous': previous,
+        'month_mar': month_mar,
+        'month_oct': month_oct,
+        'month_sep': month_sep,
+        'job_student': job_student,
+        'job_retired': job_retired,
+        'month_dec': month_dec,
+        'cons_conf_idx': cons_conf_idx,
+        'marital_single': marital_single,
+        'education_university.degree': education_university,
+        'age': age,
+        'education_unknown': education_unknown,
+        'job_unemployed': job_unemployed
+    }])
 
-    prediction = model.predict(input_data)
-
-    if prediction[0] == 1:
-        st.success("Prediction: The client is likely to subscribe.")
+    # Optional: check for missing values
+    if input_data.isnull().sum().sum() > 0:
+        st.error("Error: Missing values in input data.")
     else:
-        st.error("Prediction: The client is not likely to subscribe.")
+        prediction = model.predict(input_data)
 
-
-# In[ ]:
-
-
-
-
+        if prediction[0] == 1:
+            st.success("Prediction: The client is likely to subscribe.")
+        else:
+            st.error("Prediction: The client is not likely to subscribe.")
