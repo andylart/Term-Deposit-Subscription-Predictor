@@ -1,6 +1,13 @@
 numpy==1.26.4
 pandas==2.2.2
+<<<<<<< HEAD
 scikit-learn==1.3.2
 streamlit==1.35.0
 joblib==1.3.2
 # rebuild trigger
+=======
+scikit-learn==1.4.2
+streamlit==1.35.0
+joblib==1.3.2
+# rebuild trigger
+>>>>>>> 5230a2a47a33ea9a6a7307feebc1abe670fc6532
